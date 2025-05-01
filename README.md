@@ -99,7 +99,7 @@ The train_model component contains the code used to train the machine learning m
 
 2. Download the docker-compose.yml file:
    ```bash
-   curl -O https://raw.githubusercontent.com/yourusername/designflow/main/docker-compose.yml
+   curl -O https://github.com/daniyal077/Sketch-Based-image-Retrieval-/blob/main/docker-compose.deploy.yml
    ```
 
 3. Create a directory for the static files:
