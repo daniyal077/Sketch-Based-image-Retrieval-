@@ -1,0 +1,144 @@
+/* Generate Text Page Styles */
+.generate-text-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  width: 100%;
+}
+
+/* Main Content */
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(450px, auto);
+  gap: var(--spacing-lg);
+  width: 100%;
+}
+
+/* Upload Section */
+.upload-section {
+  width: 100%;
+  height: 100%;
+}
+
+.upload-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.button-container .btn-lg {
+  padding: var(--spacing-sm) var(--spacing-xl);
+  font-weight: 600;
+  min-width: 220px;
+  transition: all 0.3s ease;
+}
+
+.button-container .btn-lg:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Results Container */
+.results-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.loading-wrapper {
+  padding: var(--spacing-lg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+}
+
+.result-card {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
+}
+
+.text-content {
+  background-color: var(--surface-lighter);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  margin-top: var(--spacing-sm);
+  position: relative;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  border: 1px solid var(--border-color);
+}
+
+.generated-text {
+  color: var(--text-primary);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  margin-bottom: var(--spacing-lg);
+  flex: 1;
+}
+
+.download-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Page-specific empty state */
+.empty-state {
+  max-height: 400px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(400px, auto);
+    gap: var(--spacing-md);
+  }
+
+  .upload-section,
+  .results-container {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .text-content {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .generate-text-page {
+    padding: var(--spacing-sm);
+  }
+
+  .main-content {
+    grid-auto-rows: minmax(350px, auto);
+    gap: var(--spacing-sm);
+  }
+
+  .text-content {
+    max-height: 200px;
+    padding: var(--spacing-sm);
+  }
+}

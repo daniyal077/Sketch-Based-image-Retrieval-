@@ -1,63 +1,110 @@
-# General
-.DS_Store
-Thumbs.db
-*.log
-*.sqlite3
-*.pyc
-*.pyo
+# Combined .gitignore file for the entire project
+
+# Python
 __pycache__/
-*.env
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+cover/
 
-# Node.js (React frontend)
-frontend/node_modules/
-frontend/.env
-frontend/build/
-frontend/.parcel-cache/
-frontend/.next/
-frontend/npm-debug.log*
-frontend/yarn-debug.log*
-frontend/yarn-error.log*
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+.npm
+.eslintcache
+.node_repl_history
+.yarn-integrity
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Python (Flask backend)
-backend/venv/
+# Logs
+logs/
+*.log
+
+# Distribution directories
+dist/
+dist-ssr/
+*.local
+
+# IDEs and editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Project specific files to exclude (as requested)
+# Backend specific
+backend/static/Dataset/
+backend/static/model.keras
+backend/static/features_list.pkl
+backend/static/image_paths.pkl
+backend/static/old_image_path.pkl
+backend/static/old_image_paths.pkl
+backend/logs/
 backend/__pycache__/
-backend/*.pyc
-backend/*.pyo
-backend/env/
-backend/.env
-backend/.DS_Store
-backend/debug.log
-backend/*.sqlite3
+backend/controllers/__pycache__/
+backend/models/__pycache__/
+backend/utils/__pycache__/
+backend/views/__pycache__/
 
-# Dataset folders
-backend/static/Dataset/bag/
-backend/static/Dataset/cup/
-backend/static/Dataset/lamp/
-backend/static/Dataset/umbrella/
-backend/static/Dataset/watch/
-backend/static/Dataset/water bottles/
-backend/static/Dataset/sofa/
-backend/static/Dataset/hat/
+# Frontend specific
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
 
-train model/Dataset/bag/
-train model/Dataset/cup/
-train model/Dataset/lamp/
-train model/Dataset/umbrella/
-train model/Dataset/watch/
-train model/Dataset/water bottles/
-train model/Dataset/sofa/
-train model/Dataset/hat/
-
-*.pkl
-.keras
-
-
-
-
-# Temporary files
-*.tmp
-*.temp
-*.bak
-*.orig
-*.swp
-*.swo
+# Train model specific
+train_model/Dataset/
+train_model/mobile_pic/
+train_model/model.keras
+train_model/features_list.pkl
+train_model/image_paths.pkl
+train_model/*.pkl
+train_model/trainenv/
+train_model/__pycache__/

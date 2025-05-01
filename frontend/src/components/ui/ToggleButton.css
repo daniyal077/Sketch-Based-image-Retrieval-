@@ -1,0 +1,39 @@
+.toggle-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.75rem;
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+  font-weight: 500;
+  min-width: 70px;
+  margin: 0.15rem;
+  user-select: none;
+  outline: none;
+}
+
+.toggle-button:hover {
+  background-color: var(--hover-color, rgba(0, 0, 0, 0.05));
+}
+
+.toggle-button.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.toggle-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Default icon styling (overridden in ButtonGroup) */
+.toggle-icon {
+  margin-right: 0.3rem;
+  font-size: 1em;
+}

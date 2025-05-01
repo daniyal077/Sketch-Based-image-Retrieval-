@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  backend:
+    image: daniyal003/designflow-backend:v1.0.1
+    container_name: designflow-backend
+    restart: always
+    environment:
+      - FLASK_ENV=production
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+
+  frontend:
+    image: daniyal003/designflow-frontend:v1.0.1
+    container_name: designflow-frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,98 @@
+.ui-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  font-family: inherit;
+}
+
+/* Variants */
+.ui-button.default {
+  background-color: var(--surface-light);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.ui-button.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.ui-button.secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.ui-button.warning {
+  background-color: var(--color-warning);
+  color: white;
+}
+
+.ui-button.success {
+  background-color: var(--color-success);
+  color: white;
+}
+
+/* Sizes */
+.ui-button.small {
+  padding: 0.2rem 0.6rem;
+  font-size: var(--font-size-sm);
+}
+
+.ui-button.medium {
+  padding: 0.4rem 0.8rem;
+  font-size: var(--font-size-md);
+}
+
+.ui-button.large {
+  padding: 0.6rem 1.2rem;
+  font-size: var(--font-size-lg);
+}
+
+/* States */
+.ui-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.ui-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.ui-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ui-button.full-width {
+  width: 100%;
+}
+
+/* Loading state */
+.ui-button.loading {
+  color: transparent;
+}
+
+.button-loader {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

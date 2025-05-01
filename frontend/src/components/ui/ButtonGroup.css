@@ -1,0 +1,58 @@
+.button-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xs);
+  width: 100%;
+}
+
+.button-group .toggle-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs);
+  height: 60px;
+  min-width: auto;
+  margin: 0;
+  border-radius: var(--border-radius-md);
+  transition: all 0.2s ease;
+}
+
+.button-group .toggle-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.button-group .toggle-button.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-dark);
+}
+
+.button-group .toggle-icon {
+  font-size: 20px;
+  margin-right: 0;
+  margin-bottom: 4px;
+}
+
+.button-group .toggle-label {
+  font-size: var(--font-size-xs);
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .button-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .button-group .toggle-button {
+    height: 50px;
+    padding: 4px;
+  }
+
+  .button-group .toggle-icon {
+    font-size: 18px;
+  }
+}
